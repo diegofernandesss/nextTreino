@@ -5,6 +5,7 @@
   margin: 0 auto;
   max-width: 1440px;
   border-bottom: 2px solid var(--border-secondary-gray);
+  cursor: url("/Cursors.svg"), auto;
 }
 
 .content {
@@ -24,6 +25,7 @@
     align-items: stretch;
     justify-content: flex-start;
     border-bottom: 2px solid var(--border-secondary-gray);
+    max-width: 340px;
   }
 
   .content {
