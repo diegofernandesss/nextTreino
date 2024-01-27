@@ -92,11 +92,6 @@
 }
 
 .check:checked {
-  background-color: #4caf50; /* Adicione a cor desejada para representar o estado "checked" */
-  border-color: #4caf50; /* Adicione a cor desejada para a borda quando estiver "checked" */
-}
-
-.check:checked {
   background-color: #0796d3;
   border: 1px solid #0796d3;
   background: linear-gradient(0deg, #0796d3, #0796d3),
