@@ -8,6 +8,7 @@ export const Modal = ({ isOpen, onClose, onAddTask }) => {
         if (newTask !== "") {
         const taskObject = { id: Date.now(), task: newTask};
         onAddTask(taskObject);
+        setNewTask("");
         onClose();
         }
     };
