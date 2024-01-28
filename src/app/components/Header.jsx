@@ -16,7 +16,7 @@ export const Header = () => {
                 height={36}
                 priority
             />
-            <div className={stylesHeader.content}>Bem-vindo de volta, Marcus</div>
+            <div className={stylesHeader.content}>Bem-vindo de volta, Diego</div>
             <div className={stylesHeader.date}>{formattedDateString}</div>
         </header>
     );  
