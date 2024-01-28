@@ -43,6 +43,7 @@
     gap: 8px;
     border: none;
     color: #fff;
+    cursor: url("/Cursors.svg"), auto;
     background: linear-gradient(90deg, #d30707 0%, #f05353 68.65%);
   }
   
