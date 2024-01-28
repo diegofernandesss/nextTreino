@@ -22,7 +22,7 @@ export const Main = () => {
                             <input
                                 className={styleMain.check}
                                 type="checkbox"
-                                onChange={(e) => handleTaskCompletion(index, e.target.checked)}
+                                onChange={(e) => handleTaskCompletion(index, e.target.value)}
                             />
                             <label className={styleMain.label}>{task.task}</label>
                             <Image
