@@ -25,29 +25,29 @@ export const useMain = () => {
       }
     };
     
-    const handleAddTask = (newTask) => {
-        if (taskToDelete) {
-          let updatedTasks = [];
-
-        if (completedTasks.some((task) => task.id === taskToDelete.id)) {
+    const handleAddTask = (id, newTask) => {
+      if (id !== null) {
+        let updatedTasks = [];
+  
+        if (completedTasks.some((task) => task.id === id)) {
           updatedTasks = completedTasks.filter(
-            (task) => task.id !== taskToDelete.id
+            (task) => task.id !== id
           );
           setCompletedTasks(updatedTasks);
+          updateLocalStorage2(updatedTasks);
         } else {
-          updatedTasks = tasks.filter((task) => task.id !== taskToDelete.id);
-          setTasks(updatedTasks);
-        }
-
-          updateLocalStorage(updatedTasks);
-          setIsOpen(false);
-          setTaskToDelete(null);
-        } else {
-          const updatedTasks = [...tasks, newTask];
+          updatedTasks = tasks.filter((task) => task.id !== id);
           setTasks(updatedTasks);
           updateLocalStorage(updatedTasks);
         }
-      };
+        setIsOpen(false);
+        setTaskToDelete(null);
+      } else {
+        const updatedTasks = [...tasks, newTask];
+        setTasks(updatedTasks);
+        updateLocalStorage(updatedTasks);
+      }
+    };
     
     const updateLocalStorage = (tasks) => {
         localStorage.setItem("tasks", JSON.stringify(tasks));

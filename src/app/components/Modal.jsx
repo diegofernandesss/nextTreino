@@ -3,12 +3,16 @@ import style from '../styles/modal.module.css'
 
 export const Modal = ({ isOpen, onClose, onAddTask, taskToDelete, setNewTask, newTask }) => {
     const handleAddTask = () => {
+      if (taskToDelete){
+        onAddTask(taskToDelete, null)
+      } else {
         if (newTask !== "") {
-        const taskObject = { id: Date.now(), task: newTask};
-        onAddTask(taskObject);
-        setNewTask("");
-        onClose();
+          const taskObject = { id: Date.now(), task: newTask};
+          onAddTask(null, taskObject);
+          setNewTask("");
+          onClose();
         }
+      }
     };
 
     const titles = {
