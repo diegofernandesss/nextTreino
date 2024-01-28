@@ -8,7 +8,7 @@ import { useMain } from "../hooks/useMain";
 export const Main = () => {
     const {tasks, handleTaskCompletion, completedTasks,
            handleTaskNow, handleOpenModal, isOpen,
-            handleAddTask} = useMain()
+            handleAddTask, taskToDelete,setNewTask, newTask} = useMain()
       
     return (
         <main className={styleMain.global}>
@@ -31,6 +31,7 @@ export const Main = () => {
                                 width={24}
                                 height={24}
                                 className={styleMain.trash}
+                                onClick={() => handleOpenModal(task.id, true)}
                             />
                         </div>
                         ))}
@@ -53,6 +54,7 @@ export const Main = () => {
                             width={24}
                             height={24}
                             className={styleMain.trash}
+                            onClick={() => handleOpenModal(task.id, true)}
                         />
                     </div>
                     ))}
@@ -61,15 +63,18 @@ export const Main = () => {
             <div className={styleMain.position}>
                 <button 
                     className={styleMain.acaoButton} 
-                    onClick={() => handleOpenModal(true)}>
+                    onClick={() => handleOpenModal(null, true)}>
                         Adicionar nova tarefa
                 </button>
             </div>
             </div>
             <Modal 
                 isOpen={isOpen}
-                onClose={() => handleOpenModal(false)}
+                onClose={() => handleOpenModal(null, false)}
                 onAddTask={handleAddTask}
+                taskToDelete={taskToDelete}
+                setNewTask={setNewTask}
+                newTask={newTask}
             />
         </div>
      </main>

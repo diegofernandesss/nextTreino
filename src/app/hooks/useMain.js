@@ -4,6 +4,8 @@ export const useMain = () => {
     const [tasks, setTasks] = useState([]);
     const [completedTasks, setCompletedTasks] = useState([]);
     const [isOpen, setIsOpen] = useState(false);
+    const [taskToDelete, setTaskToDelete] = useState(null);    
+    const [newTask, setNewTask] = useState("");
     
     useEffect(() => {
         const storedTasks = JSON.parse(localStorage.getItem("tasks")) || [];
@@ -12,12 +14,39 @@ export const useMain = () => {
         setCompletedTasks(completedTasks)
       }, []);
     
-    const handleOpenModal = (boolean) => setIsOpen(boolean);
+    const handleOpenModal = (id, boolean) => {
+      if (id !== null) {
+        setTaskToDelete(id);
+        setIsOpen(boolean);
+      } else {
+        setIsOpen(boolean);
+        setTaskToDelete(null);
+        setNewTask("")
+      }
+    };
     
     const handleAddTask = (newTask) => {
-        const updatedTasks = [...tasks, newTask];
-        setTasks(updatedTasks);
-        updateLocalStorage(updatedTasks);
+        if (taskToDelete) {
+          let updatedTasks = [];
+
+        if (completedTasks.some((task) => task.id === taskToDelete.id)) {
+          updatedTasks = completedTasks.filter(
+            (task) => task.id !== taskToDelete.id
+          );
+          setCompletedTasks(updatedTasks);
+        } else {
+          updatedTasks = tasks.filter((task) => task.id !== taskToDelete.id);
+          setTasks(updatedTasks);
+        }
+
+          updateLocalStorage(updatedTasks);
+          setIsOpen(false);
+          setTaskToDelete(null);
+        } else {
+          const updatedTasks = [...tasks, newTask];
+          setTasks(updatedTasks);
+          updateLocalStorage(updatedTasks);
+        }
       };
     
     const updateLocalStorage = (tasks) => {
@@ -29,18 +58,18 @@ export const useMain = () => {
     }
     
     const handleTaskCompletion = (index, isCompleted) => {
-        const updatedTasks = [...tasks];
-        const completedTask = updatedTasks.splice(index, 1)[0];
-      
-        if (isCompleted) {
-          setCompletedTasks([...completedTasks, completedTask]);
-          updateLocalStorage2([...completedTasks, completedTask]);
-        } else {
-          setCompletedTasks(completedTasks.filter((task) => task.id !== completedTask.id));
-        }
-      
-        setTasks(updatedTasks);
-        updateLocalStorage(updatedTasks);
+      const updatedTasks = [...tasks];
+      const completedTask = updatedTasks.splice(index, 1)[0];
+    
+      if (isCompleted) {
+        setCompletedTasks([...completedTasks, completedTask]);
+        updateLocalStorage2([...completedTasks, completedTask]);
+      } else {
+        setCompletedTasks(completedTasks.filter((task) => task.id !== completedTask.id));
+      }
+    
+      setTasks(updatedTasks);
+      updateLocalStorage(updatedTasks);
       };
 
       const handleTaskNow = (index, isCompleted) => {
@@ -65,6 +94,9 @@ export const useMain = () => {
         handleTaskNow,
         handleOpenModal,
         isOpen,
-        handleAddTask
+        handleAddTask,
+        taskToDelete,
+        setNewTask,
+        newTask
       }
 }
