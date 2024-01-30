@@ -1,9 +1,9 @@
 'use client'
 
 import Image from "next/image";
-import styleMain from  "../styles/main.module.css"
-import { Modal } from "./Modal";
-import { useMain } from "../hooks/useMain";
+import styleMain from  "../../styles/main.module.css"
+import { Modal } from "../../components/Modal";
+import { useMain } from "../../hooks/useMain";
 
 export const Main = () => {
     const {tasks, handleTaskCompletion, completedTasks,

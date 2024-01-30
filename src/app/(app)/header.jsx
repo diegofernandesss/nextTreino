@@ -1,8 +1,8 @@
 'use client'
 
 import Image from "next/image";
-import stylesHeader from "../styles/header.module.css";
-import { useHeader } from "../hooks/useHeader";
+import stylesHeader from "../../styles/header.module.css";
+import { useHeader } from "../../hooks/useHeader";
 
 export const Header = () => {
     const {windowWidth, formattedDateString} = useHeader();
