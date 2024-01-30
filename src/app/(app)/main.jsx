@@ -2,7 +2,7 @@
 
 import Image from "next/image";
 import styleMain from  "../../styles/main.module.css"
-import { Modal } from "../../components/Modal";
+import { Modal } from "../../components/modal";
 import { useMain } from "../../hooks/useMain";
 
 export const Main = () => {
