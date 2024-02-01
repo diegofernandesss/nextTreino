@@ -31,6 +31,30 @@
   align-items: center;
 }
 
+.task input {
+  display: none;;
+}
+
+.task input + label:before {
+  content: '';
+  width: 24px;
+  height: 24px;
+  top: 16px;
+  left: 16px;
+  border-radius: 4px;
+  background-color: white;
+  border: 1px solid #0796D3;
+  display: inline-block;
+  vertical-align: middle;
+  margin-right: 8px;
+  margin-bottom: 3px;
+}
+
+.task input:checked + label:before {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='25' height='25' viewBox='0 0 10 10'%3E%3Cg class='nc-icon-wrapper' stroke-width='1' fill='%23555555'%3E%3Cpath fill='none' stroke='%230796D3' stroke-linecap='round' stroke-linejoin='round' stroke-miterlimit='10' data-cap='butt' d='M2.83 4.72l1.58 1.58 2.83-2.83' /%3E%3C/g%3E%3C/svg%3E");
+  background-color: #A0DCF6;
+}
+
 .task {
   position: relative;
   width: 100%;

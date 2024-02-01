@@ -20,11 +20,12 @@ export const Main = () => {
                     {tasks.map((task, index) => (
                         <div key={task.id} className={styleMain.task}>
                             <input
-                                className={styleMain.check}
-                                type="checkbox"
+                                type="checkbox" 
+                                id="check"
+                                name="check"
                                 onChange={(e) => handleTaskCompletion(index, e.target.value)}
                             />
-                            <label className={styleMain.label}>{task.task}</label>
+                            <label htmlFor="check" className={styleMain.label}>{task.task}</label>
                             <Image
                                 src="/trash.svg"
                                 alt="Lixeira"
@@ -41,13 +42,14 @@ export const Main = () => {
                     {completedTasks.map((task, index) => (
                     <div key={task.id} className={styleMain.task}>
                         <input
-                            className={styleMain.check}
-                            type="checkbox"
+                            type="checkbox" 
+                            id="check1"
+                            name="check1"
                             readOnly
                             checked
                             onChange={(e) => handleTaskNow(index, e.target.value)}
                         />
-                        <label className={styleMain.taskFinished}>{task.task}</label>
+                        <label htmlFor="check1" className={styleMain.taskFinished}>{task.task}</label>
                         <Image
                             src="/trash.svg"
                             alt="Lixeira"
