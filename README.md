@@ -34,7 +34,7 @@ npm install
 npm run dev
 ```
 
-1. A Aplicação estará acessível em: http://localhost:3001
+1. A Aplicação estará acessível em: http://localhost:3000
 
 ## Tecnologias:
 
@@ -56,4 +56,4 @@ A aplicação desenvolvida foi baseada no Protótipo: [LINK-FIGMA](https://www.f
 
 ## Licença
 
-Este projeto está sob licença do MIT. Veja o arquivo [LICENSE](.github/LICENSE.md) para mais detalhes.
+Este projeto está sob licença do MIT. Veja o arquivo [LICENSE](./LICENSE) para mais detalhes.
