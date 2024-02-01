@@ -48,7 +48,7 @@ npm run dev
 
 <h3>Layout Desktop:</h3>
 
-![Imagem Desenvolvida](https://github.com/diegofernandesss/diegofernandesss/assets/88402851/7681524b-ebd4-483e-bf9e-84bf8fe7af3d)
+![Imagem Desenvolvida](https://github.com/diegofernandesss/nextTreino/assets/88402851/2290f1e5-73e7-41ab-ac48-e6085dda8715)
 
 ## Referência
 
