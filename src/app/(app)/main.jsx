@@ -42,12 +42,12 @@ export const Main = () => {
                     <div key={task.id} className={styleMain.task}>
                         <input
                             type="checkbox" 
-                            id={`check1-${task.id}`}
+                            id={`check01-${task.id}`}
                             readOnly
                             checked
                             onChange={(e) => handleTaskNow(index, e.target.value)}
                         />
-                        <label htmlFor={`check1-${task.id}`} className={styleMain.taskFinished}>{task.task}</label>
+                        <label htmlFor={`check01-${task.id}`} className={styleMain.taskFinished}>{task.task}</label>
                         <Image
                             src="/trash.svg"
                             alt="Lixeira"
