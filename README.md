@@ -22,7 +22,7 @@
 
 No link abaixo você irá encontrar o layout da aplicação Web tanto pra mobile como Desktop:
 
-- [Layout Web e](https://www.figma.com/file/OhwPazB8e5zHeDz9zpMcaI/Untitled?type=design&node-id=0-1&mode=design&t=8B8rxfTdEWIXouCV-0)
+- [Layout Web e Mobile](https://www.figma.com/file/OhwPazB8e5zHeDz9zpMcaI/Untitled?type=design&node-id=0-1&mode=design&t=8B8rxfTdEWIXouCV-0)
 
 ## Tecnologias:
 
