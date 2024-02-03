@@ -3,11 +3,11 @@
 </h1>
 
 <p align="center">
-  <a href="#layout">Layout</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+  <!-- <a href="#layout">Layout</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp; -->
   <a href="#tecnologias">Tecnologias</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
   <a href="#projeto">Projeto</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
-  <a href="#instalação">Instalação</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
-  <a href="#usabilidade">Usabilidade</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+  <!-- <a href="#instalação">Instalação</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp; -->
+  <!-- <a href="#usabilidade">Usabilidade</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp; -->
   <a href="#licença">Licença</a>
 </p>
 
@@ -22,7 +22,7 @@
 
 No link abaixo você irá encontrar o layout da aplicação Web tanto pra mobile como Desktop:
 
-- [Layout Web e Mobile](https://www.figma.com/file/OhwPazB8e5zHeDz9zpMcaI/Untitled?type=design&node-id=0-1&mode=design&t=8B8rxfTdEWIXouCV-0)
+- [Layout Web e](https://www.figma.com/file/OhwPazB8e5zHeDz9zpMcaI/Untitled?type=design&node-id=0-1&mode=design&t=8B8rxfTdEWIXouCV-0)
 
 ## Tecnologias:
 
